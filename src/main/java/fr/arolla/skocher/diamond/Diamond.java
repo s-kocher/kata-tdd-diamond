@@ -5,48 +5,60 @@ import java.util.Arrays;
 public class Diamond {
 
     private final char widthLetter;
+    private int AIndex;
+    private int depth;
 
     public Diamond(char widthLetter) {
         this.widthLetter = widthLetter;
+
+        this.AIndex = Character.getNumericValue('A');
+
+        //Ex :  A => 10; D => 13; depth = 13-10 => diamond depth is 3
+        this.depth = Character.getNumericValue(widthLetter) - AIndex;
     }
 
     public String display() {
-        if (widthLetter == 'D') {
-            return "" +
-                displayTip() + "\n" +
-                getSpaces(2) + "B" + getSpaces(1) + "B" + "\n" +
-                getSpaces(1) + "C" + getSpaces(3) + "C" + "\n" +
-                getSpaces(0) + "D" + getSpaces(5) + "D" + "\n" +
-                getSpaces(1) + "C" + getSpaces(3) + "C" + "\n" +
-                getSpaces(2) + "B" + getSpaces(1) + "B" + "\n" +
-                displayTip();
-        }
-        if (widthLetter == 'C') {
-            return "" +
-                displayTip() + "\n" +
-                getSpaces(1) + "B" + getSpaces(1) + "B" + "\n" +
-                getSpaces(0) + "C" + getSpaces(3) + "C" + "\n" +
-                getSpaces(1) + "B" + getSpaces(1) + "B" + "\n" +
-                displayTip();
-        }
-        if (widthLetter == 'B') {
-            return "" +
-                displayTip() + "\n" +
-                getSpaces(0) + "B" + getSpaces(1) + "B" + "\n" +
-                displayTip();
+        if (widthLetter == 'A') {
+            return displayTip();
         }
 
-        return displayTip();
+        StringBuilder result = new StringBuilder();
+        result.append(displayTip());
+        result.append("\n");
+
+        //Ex : From B to D
+        for (int level = 1; level <= depth; level++) {
+            result.append(displayLineLetter(level));
+        }
+        //Ex : From C to B
+        for (int level = depth - 1; level > 0; level--) {
+            result.append(displayLineLetter(level));
+        }
+
+        result.append(displayTip());
+        return result.toString();
+
     }
 
     private String displayTip() {
-        int depth = Character.getNumericValue(widthLetter) - Character.getNumericValue('A');
         String leftSpaces = getSpaces(depth);
         return leftSpaces + "A";
+    }
+
+    private String displayLineLetter(int level) {
+        int letterIndex = AIndex + level;
+        char letter = Character.toUpperCase(Character.forDigit(letterIndex, Character.MAX_RADIX));
+
+        String leftSpaces = getSpaces(depth - level);
+        String middleSpaces = getSpaces(level * 2 - 1);
+
+        return leftSpaces + letter + middleSpaces + letter + "\n";
     }
 
     private static String getSpaces(int spacesNumber) {
         return " ".repeat(spacesNumber);
     }
+
+
 
 }
