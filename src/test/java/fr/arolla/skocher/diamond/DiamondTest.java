@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 public class DiamondTest {
 
     @Test
-    public void should_for_A_get_single_a_diamond() {
+    public void should_draw_diamond_a() {
         Diamond diamond = new Diamond('A');
 
         String diamondDisplay = diamond.display();
@@ -16,7 +16,7 @@ public class DiamondTest {
     }
 
     @Test
-    public void should_for_B_get_single_a_diamond() {
+    public void should_draw_diamond_b() {
         Diamond diamond = new Diamond('B');
 
         String diamondDisplay = diamond.display();
