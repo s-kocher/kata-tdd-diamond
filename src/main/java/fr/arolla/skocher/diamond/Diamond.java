@@ -11,7 +11,16 @@ public class Diamond {
     }
 
     public String display() {
-
+        if (widthLetter == 'D') {
+            return "" +
+                getSpaces(3) + "A" + "\n" +
+                getSpaces(2) + "B" + getSpaces(1) + "B" + "\n" +
+                getSpaces(1) + "C" + getSpaces(3) + "C" + "\n" +
+                getSpaces(0) + "D" + getSpaces(5) + "D" + "\n" +
+                getSpaces(1) + "C" + getSpaces(3) + "C" + "\n" +
+                getSpaces(2) + "B" + getSpaces(1) + "B" + "\n" +
+                getSpaces(3) + "A";
+        }
         if (widthLetter == 'C') {
             return
             getSpaces(2) + "A" + "\n" +
