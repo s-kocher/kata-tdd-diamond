@@ -7,8 +7,12 @@ import org.junit.jupiter.api.Test;
 public class DiamondTest {
 
     @Test
-    public void dummy_test() {
-        assertEquals(true, true);
+    public void should_for_A_get_single_a_diamond() {
+        Diamond diamond = new Diamond('A');
+
+        String diamondDisplay = diamond.display();
+
+        assertEquals("A", diamondDisplay);
     }
 
 }
