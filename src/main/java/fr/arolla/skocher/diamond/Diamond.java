@@ -22,7 +22,7 @@ public class Diamond {
                 getSpaces(3) + "A";
         }
         if (widthLetter == 'C') {
-            return
+            return "" +
             getSpaces(2) + "A" + "\n" +
             getSpaces(1) + "B" + getSpaces(1) + "B" + "\n" +
             getSpaces(0) + "C" + getSpaces(3) + "C" + "\n" +
@@ -30,7 +30,7 @@ public class Diamond {
             getSpaces(2) + "A";
         }
         if (widthLetter == 'B') {
-            return
+            return "" +
                 getSpaces(1) + "A" + "\n" +
                 getSpaces(0) + "B" + getSpaces(1) + "B" + "\n" +
                 getSpaces(1) + "A";
