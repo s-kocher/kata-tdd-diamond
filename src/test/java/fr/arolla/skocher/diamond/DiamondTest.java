@@ -63,4 +63,24 @@ public class DiamondTest {
         assertEquals(expectedDisplay, diamondDisplay);
     }
 
+    @Test
+    public void should_draw_diamond_e() {
+        Diamond diamond = new Diamond('E');
+
+        String diamondDisplay = diamond.display();
+
+        String expectedDisplay = "" +
+            "    A\n" +
+            "   B B\n" +
+            "  C   C\n" +
+            " D     D\n" +
+            "E       E\n" +
+            " D     D\n" +
+            "  C   C\n" +
+            "   B B\n" +
+            "    A";
+
+        assertEquals(expectedDisplay, diamondDisplay);
+    }
+
 }
