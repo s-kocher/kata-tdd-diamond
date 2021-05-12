@@ -21,7 +21,7 @@ public class DiamondTest {
 
         String diamondDisplay = diamond.display();
 
-        String expectedDisplay =
+        String expectedDisplay = "" +
             " A\n" +
             "B B\n" +
             " A";
@@ -35,7 +35,7 @@ public class DiamondTest {
 
         String diamondDisplay = diamond.display();
 
-        String expectedDisplay =
+        String expectedDisplay = "" +
             "  A\n" +
             " B B\n" +
             "C    C\n" +
