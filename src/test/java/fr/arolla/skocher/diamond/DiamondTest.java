@@ -38,7 +38,7 @@ public class DiamondTest {
         String expectedDisplay = "" +
             "  A\n" +
             " B B\n" +
-            "C    C\n" +
+            "C   C\n" +
             " B B\n" +
             "  A";
 

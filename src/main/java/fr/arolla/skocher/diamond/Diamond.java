@@ -16,7 +16,7 @@ public class Diamond {
             return
             getSpaces(2) + "A" + "\n" +
             getSpaces(1) + "B" + getSpaces(1) + "B" + "\n" +
-            getSpaces(0) + "C" + getSpaces(4) + "C" + "\n" +
+            getSpaces(0) + "C" + getSpaces(3) + "C" + "\n" +
             getSpaces(1) + "B" + getSpaces(1) + "B" + "\n" +
             getSpaces(2) + "A";
         }
