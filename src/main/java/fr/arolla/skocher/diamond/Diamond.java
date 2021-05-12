@@ -20,13 +20,13 @@ public class Diamond {
     }
 
     public String display() {
-        if (widthLetter == 'A') {
-            return displayTip();
-        }
-
         StringBuilder result = new StringBuilder();
+
         result.append(displayTip());
-        result.append(LINE_SEPARATOR);
+
+        if (depth > 0) {
+            result.append(LINE_SEPARATOR);
+        }
 
         //Ex : From B to D
         for (int level = 1; level <= depth; level++) {
@@ -37,7 +37,10 @@ public class Diamond {
             result.append(displayLineLetter(level));
         }
 
-        result.append(displayTip());
+        if (depth > 0) {
+            result.append(displayTip());
+        }
+
         return result.toString();
     }
 
