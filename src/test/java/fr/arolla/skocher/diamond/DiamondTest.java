@@ -15,4 +15,18 @@ public class DiamondTest {
         assertEquals("A", diamondDisplay);
     }
 
+    @Test
+    public void should_for_B_get_single_a_diamond() {
+        Diamond diamond = new Diamond('B');
+
+        String diamondDisplay = diamond.display();
+
+        String expectedDisplay =
+            " A \n" +
+            "B B\n" +
+            " A";
+
+        assertEquals(expectedDisplay, diamondDisplay);
+    }
+
 }
