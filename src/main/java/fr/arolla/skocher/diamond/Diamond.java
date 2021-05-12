@@ -15,7 +15,7 @@ public class Diamond {
 
         this.AIndex = Character.getNumericValue('A');
 
-        //Ex :  A => 10; D => 13; depth = 13-10 => diamond depth is 3
+        //Ex :  A => 10; D => 13; depth = 13-10 => diamond depth for D is 3
         this.depth = Character.getNumericValue(widthLetter) - AIndex;
     }
 
@@ -39,7 +39,6 @@ public class Diamond {
 
         result.append(displayTip());
         return result.toString();
-
     }
 
     private String displayTip() {
@@ -49,12 +48,16 @@ public class Diamond {
 
     private String displayLineLetter(int level) {
         int letterIndex = AIndex + level;
-        char letter = Character.toUpperCase(Character.forDigit(letterIndex, Character.MAX_RADIX));
+        char letter = getLetterFromIndex(letterIndex);
 
         String leftSpaces = getSpaces(depth - level);
         String middleSpaces = getSpaces(level * 2 - 1);
 
         return leftSpaces + letter + middleSpaces + letter + LINE_SEPARATOR;
+    }
+
+    private static char getLetterFromIndex(int letterIndex) {
+        return Character.toUpperCase(Character.forDigit(letterIndex, Character.MAX_RADIX));
     }
 
     private static String getSpaces(int spacesNumber) {
