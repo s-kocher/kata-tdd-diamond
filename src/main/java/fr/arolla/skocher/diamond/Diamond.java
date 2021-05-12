@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 public class Diamond {
 
+    public static final String LINE_SEPARATOR = "\n";
+
     private final char widthLetter;
     private int AIndex;
     private int depth;
@@ -24,7 +26,7 @@ public class Diamond {
 
         StringBuilder result = new StringBuilder();
         result.append(displayTip());
-        result.append("\n");
+        result.append(LINE_SEPARATOR);
 
         //Ex : From B to D
         for (int level = 1; level <= depth; level++) {
@@ -52,13 +54,11 @@ public class Diamond {
         String leftSpaces = getSpaces(depth - level);
         String middleSpaces = getSpaces(level * 2 - 1);
 
-        return leftSpaces + letter + middleSpaces + letter + "\n";
+        return leftSpaces + letter + middleSpaces + letter + LINE_SEPARATOR;
     }
 
     private static String getSpaces(int spacesNumber) {
         return " ".repeat(spacesNumber);
     }
-
-
 
 }
