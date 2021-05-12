@@ -22,7 +22,7 @@ public class DiamondTest {
         String diamondDisplay = diamond.display();
 
         String expectedDisplay =
-            " A \n" +
+            " A\n" +
             "B B\n" +
             " A";
 

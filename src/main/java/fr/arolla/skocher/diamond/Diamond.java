@@ -13,7 +13,7 @@ public class Diamond {
     public String display() {
         if (widthLetter == 'B') {
             return
-                " A \n" +
+                " A\n" +
                 "B B\n" +
                 " A";
         }
