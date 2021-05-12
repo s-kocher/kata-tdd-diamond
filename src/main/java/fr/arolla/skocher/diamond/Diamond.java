@@ -11,21 +11,27 @@ public class Diamond {
     }
 
     public String display() {
+
         if (widthLetter == 'C') {
             return
-                "  A\n" +
-                " B B\n" +
-                "C    C\n" +
-                " B B\n" +
-                "  A";
+            getSpaces(2) + "A" + "\n" +
+            getSpaces(1) + "B" + getSpaces(1) + "B" + "\n" +
+            getSpaces(0) + "C" + getSpaces(4) + "C" + "\n" +
+            getSpaces(1) + "B" + getSpaces(1) + "B" + "\n" +
+            getSpaces(2) + "A";
         }
         if (widthLetter == 'B') {
             return
-                " A\n" +
-                "B B\n" +
-                " A";
+                getSpaces(1) + "A" + "\n" +
+                getSpaces(0) + "B" + getSpaces(1) + "B" + "\n" +
+                getSpaces(1) + "A";
         }
 
         return "A";
     }
+
+    private static String getSpaces(int spacesNumber) {
+        return " ".repeat(spacesNumber);
+    }
+
 }
